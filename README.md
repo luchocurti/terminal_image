@@ -20,13 +20,18 @@ python -m pip install Pillow
 
 ## How to download the project
 
+1. Click on the "Clone or download" button and select "Download ZIP".
+2. Finally, simply unzip the downloaded folder.
+
+## How to clone the project
+
 1. Click on the "Clone or download" button and copy the web URL.
-2. Create a new folder in Windows, name it "terminal_image" and open it.
+2. Create a new folder in Windows and open it.
 3. Right-click => "Git Bash Here"
 4. Clone the remote repository to your local directory:
 
     ```bash
-    git clone <https://github.com/luchocurti/terminal_image.git>
+    git clone https://github.com/luchocurti/terminal_image.git
     ```
 
 5. Return to the folder and the files will be there.
@@ -53,27 +58,27 @@ Where:
 
 * py terminal_image.py apple.jpg * 38 38
 
-![apple](https://drive.google.com/file/d/1EUZUprgVphWr4nyN6Olt2luPN657VNc7/view?usp=sharing)
+![apple](https://raw.githubusercontent.com/luchocurti/terminal_image/master/examples/apple.JPG)
 
 * py terminal_image.py coca-cola.jpg C 80 80
 
-![coca-cola](https://drive.google.com/file/d/1jpMlcfwaZatmbDTvPZ0SSn-1yPfG-BL_/view?usp=sharing)
+![coca-cola](https://raw.githubusercontent.com/luchocurti/terminal_image/master/examples/coca%20cola.JPG)
 
 * py terminal_image.py google.jpg █ 84 84
 
-![google](https://drive.google.com/file/d/1e0m1TCO9eBQxSHccs40wUYfJXezzMYJy/view?usp=sharing)
+![google](https://raw.githubusercontent.com/luchocurti/terminal_image/master/examples/google.JPG)
 
 * py terminal_image.py nike.jpg / 83 83
 
-![nike](https://drive.google.com/file/d/1K2moc7x1hRhZLr8PA03KHSBwvvHnK4_w/view?usp=sharing)
+![nike](https://raw.githubusercontent.com/luchocurti/terminal_image/master/examples/nike.JPG)
 
 * py terminal_image.py real_madrid.png M 38 38
 
-![real_madrid](https://drive.google.com/file/d/1ss3n2poV3wkPc9M3AGhGkRJS0-N6LVjt/view?usp=sharing)
+![real_madrid](https://raw.githubusercontent.com/luchocurti/terminal_image/master/examples/real%20madrid.JPG)
 
 * py terminal_image.py rgb.png # 40 40
 
-![rgb](https://drive.google.com/file/d/1JHg2ycJ5-_VgQwvUfXTp80lP9L_wNZwD/view?usp=sharing)
+![rgb](https://raw.githubusercontent.com/luchocurti/terminal_image/master/examples/rgb.JPG)
 
 ## Developer contact info
 
