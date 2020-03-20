@@ -1,7 +1,7 @@
 #! python3
 
 '''
-Usage: py terminal_image.py image_name.ext [character] [Image_width] [Image_height] [BW]
+Usage: python terminal_image.py image_name.ext [character] [Image_width] [Image_height] [BW]
 '''
 
 # Import external modules:
@@ -59,7 +59,7 @@ def get_color(red, green, blue):
 def print_image(arg_list, directory):
     # Show the correct order of the argument list:
     print(
-        "\nList of Arguments: py terminal_image.py image_name.ext [character] [Image_width] [Image_height] [BW]\n")
+        "\nList of Arguments: python terminal_image.py image_name.ext [character] [Image_width] [Image_height] [BW]\n")
 
     # Get the number of arguments received:
     arguments = len(arg_list)

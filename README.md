@@ -43,7 +43,7 @@ python -m pip install Pillow
 3. Run:
 
     ```bash
-    py terminal_image.py image_name.ext [character] [Image_width] [Image_height] [BW]
+    python terminal_image.py image_name.ext [character] [Image_width] [Image_height] [BW]
     ```
 
 Where:
@@ -56,29 +56,47 @@ Where:
 
 ## Some examples
 
-* py terminal_image.py apple.jpg * 38 38
+```bash
+python terminal_image.py apple.jpg * 38 38
+```
 
 ![apple](https://raw.githubusercontent.com/luchocurti/terminal_image/master/examples/apple.JPG)
 
-* py terminal_image.py coca-cola.jpg C 80 80
+```bash
+python terminal_image.py coca-cola.jpg C 80 80
+```
 
 ![coca-cola](https://raw.githubusercontent.com/luchocurti/terminal_image/master/examples/coca%20cola.JPG)
 
-* py terminal_image.py google.jpg █ 84 84
+```bash
+python terminal_image.py google.jpg █ 84 84
+```
 
 ![google](https://raw.githubusercontent.com/luchocurti/terminal_image/master/examples/google.JPG)
 
-* py terminal_image.py nike.jpg / 83 83
+```bash
+python terminal_image.py nike.jpg / 83 83
+```
 
 ![nike](https://raw.githubusercontent.com/luchocurti/terminal_image/master/examples/nike.JPG)
 
-* py terminal_image.py real_madrid.png M 38 38
+```bash
+python terminal_image.py real_madrid.png M 38 38
+```
 
 ![real_madrid](https://raw.githubusercontent.com/luchocurti/terminal_image/master/examples/real%20madrid.JPG)
 
-* py terminal_image.py rgb.png # 40 40
+```bash
+python terminal_image.py rgb.png # 40 40
+```
 
 ![rgb](https://raw.githubusercontent.com/luchocurti/terminal_image/master/examples/rgb.JPG)
+
+```bash
+python terminal_image.py covid.jpg * 40 40 BW
+```
+
+![covid](https://raw.githubusercontent.com/luchocurti/terminal_image/master/examples/covid.JPG)
 
 ## Developer contact info
 
