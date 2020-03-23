@@ -11,7 +11,7 @@ import sys
 
 
 # General definitions:
-VERSION = "V1.0.0"
+VERSION = "V1.0.1"
 DEBUGGING = False
 CHAR_DEFAULT = "█"
 CHAR_BLACK = " "
@@ -37,6 +37,13 @@ FORE_WHITE = EDIT_COMMAND + "37m"
 
 # Get the color of the 8 possible saturated values:
 def get_color(red, green, blue):
+    """
+    Function:   get_color(red, green, blue)
+    Summary:    Get the color of the 8 possible saturated values
+    Receive:    Red, green and blue values as booleans
+    Return:     ASCII command to change the terminal color
+    """
+
     if red and green and blue:
         return(FORE_WHITE)
     if red and green and not blue:
@@ -57,6 +64,21 @@ def get_color(red, green, blue):
 
 # This is executed only when the file is used as a script:
 def print_image(arg_list, directory):
+    """
+    Function:   print_image(arg_list, directory)
+    Summary:    Display an image in the Command Prompt (CMD) as a matrix of text characters
+    Receive:    arg_list = A list of the following arguments:
+                    - "python"              # String
+                    - "terminal_image.py"   # String - Name of the script
+                    - "image_name.ext"      # String - Name of the image + its extension
+                    - [character]           # An optional character
+                    - [Image_width]         # An optional image width (number of characters)
+                    - [Image_height]        # An optional image height (number of characters)
+                    - [BW]                  # An optional to print the image in Black and White
+                directory = A string representing the image directory
+    Return:     0: If success / Not 0: A string (The error message)
+    """
+
     # Show the correct order of the argument list:
     print(
         "\nList of Arguments: python terminal_image.py image_name.ext [character] [Image_width] [Image_height] [BW]\n")
@@ -248,6 +270,14 @@ def print_image(arg_list, directory):
 
 # Starting point - Check if the file is used as a Script:
 if __name__ == "__main__":
+    # Only for debugging purposes:
+    if DEBUGGING:
+        print(" ")
+        print("Function print_image documentation: {0}".format(
+            print_image.__doc__))
+        print("Function get_color documentation: {0}".format(
+            get_color.__doc__))
+
     # Call the "main" function and pass command line arguments as parameters:
     result = print_image(sys.argv, os.getcwd())
 
