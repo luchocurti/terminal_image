@@ -98,6 +98,10 @@ python terminal_image.py covid.jpg * 40 40 BW
 
 ![covid](https://raw.githubusercontent.com/luchocurti/terminal_image/master/examples/covid.JPG)
 
+## How can you help
+
+Test it, comment on it, modify it, improve it, and share it!
+
 ## Developer contact info
 
 * `luchocurti@gmail.com`

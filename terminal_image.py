@@ -11,13 +11,15 @@ import sys
 
 
 # General definitions:
-VERSION = "V1.0.1"
+VERSION = "V1.0.2"
 DEBUGGING = False
-CHAR_DEFAULT = "█"
+CHAR_DEFAULT = u"\u2588"    # Unicode Full Block
 CHAR_BLACK = " "
+MIN_CHAR_VAL = 32           # Char = Space
+MAX_CHAR_VAL = 127          # Char = Delete
 IMAGE_X_DEFAULT = 60
 IMAGE_Y_DEFAULT = 30
-HALF_SCALE = (256 // 2)  # The full scale uses 1 Byte deep
+HALF_SCALE = (256 // 2)     # The full scale uses 1 Byte deep
 PIXEL_WIDTH = 2
 
 EDIT_COMMAND = "\033["
@@ -128,10 +130,15 @@ def print_image(arg_list, directory):
                 # Set the character used to create the terminal image:
                 fillChar = CHAR_DEFAULT
 
-                # Check if the user set a specific character:
+                # Check if the user wants to set a specific character:
                 if arguments >= 3:
-                    # Get only the first character:
-                    fillChar = arg_list[2][0]
+                    # Get the value of the first character:
+                    new_char_val = ord(arg_list[2][0])
+
+                    # Check if it is a printable character:
+                    if (new_char_val > MIN_CHAR_VAL) and (new_char_val < MAX_CHAR_VAL):
+                        # Set the new desired character:
+                        fillChar = arg_list[2][0]
 
                 # Set the width of the terminal image:
                 image_x_size = IMAGE_X_DEFAULT
