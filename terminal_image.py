@@ -11,7 +11,7 @@ import sys
 
 
 # General definitions:
-VERSION = "V1.0.2"
+VERSION = "V1.0.3"
 DEBUGGING = False
 CHAR_DEFAULT = u"\u2588"    # Unicode Full Block
 CHAR_BLACK = " "
@@ -77,7 +77,7 @@ def print_image(arg_list, directory):
                     - [Image_width]         # An optional image width (number of characters)
                     - [Image_height]        # An optional image height (number of characters)
                     - [BW]                  # An optional to print the image in Black and White
-                directory = A string representing the image directory
+                directory = A string representing the program directory
     Return:     0: If success / Not 0: A string (The error message)
     """
 
@@ -99,8 +99,16 @@ def print_image(arg_list, directory):
 
     # Check if there is an image in the arguments:
     if arguments >= 2:
-        # Create the full file path:
-        file_path = directory + "\\" + arg_list[1]
+        # Get the name of the file:
+        file_name = arg_list[1]
+
+        # Check if the user enters an absolute or relative path:
+        if file_name.startswith("/") or file_name.startswith("\\"):
+            # Create the full absolute path of the file:
+            file_path = os.path.abspath(os.sep) + file_name[1:]
+        else:
+            # Create the full relative path of the file:
+            file_path = directory + "\\" + file_name
 
         # Check if the file exists:
         if os.path.isfile(file_path):
