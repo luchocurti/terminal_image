@@ -6,7 +6,7 @@ Insert an image and display it in the Command Prompt (CMD) as a matrix of text c
 
 ## Supported files
 
-The images can be BMP, GIF, ICO, JPEG, JPG, PNG, and TIFF.
+The images can be BMP, DIB, EPS, GIF, ICNS, ICO, IM, JPEG, JPG, MSP, PCX, PNG, PPM, SGI, SPIDER, TGA, TIFF, WEBP and XBM.
 
 ## Module dependencies
 
